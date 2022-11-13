@@ -32,6 +32,12 @@ importers:
     devDependencies:
       typescript: 4.8.4
 
+  packages/tsconfig:
+    specifiers:
+      '@tsconfig/strictest': ^1.0.2
+    dependencies:
+      '@tsconfig/strictest': 1.0.2
+
 packages:
 
   /@antfu/eslint-config-basic/0.30.1_oftc3gckspryo2itqqx2b5nlj4:
@@ -422,6 +428,10 @@ packages:
       picocolors: 1.0.0
       tiny-glob: 0.2.9
       tslib: 2.4.1
+    dev: false
+
+  /@tsconfig/strictest/1.0.2:
+    resolution: {integrity: sha512-IRKlC8cnP7zMz1SDBjyIVyPapkEGWLZ6wkF6Z8T+xU80P9sO5uGXlIUvtzjx+7ehPJRWxkB6CeIDwUfyqNtYkQ==}
     dev: false
 
   /@types/is-ci/3.0.0:

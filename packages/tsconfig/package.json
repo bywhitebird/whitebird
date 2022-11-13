@@ -1,0 +1,23 @@
+{
+  "name": "@whitebird/tsconfig",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bywhitebird/whitebird.git"
+  },
+  "license": "MIT",
+  "files": [
+    "base.json",
+    "node.json"
+  ],
+  "bugs": {
+    "url": "https://github.com/bywhitebird/whitebird/issues"
+  },
+  "homepage": "https://github.com/bywhitebird/whitebird/tree/main/packages/tsconfig#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@tsconfig/strictest": "^1.0.2"
+  }
+}
