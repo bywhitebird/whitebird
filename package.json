@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@whitebird/eslint-config": "workspace:*",
+    "eslint-plugin-whitebird": "workspace:*",
     "prettier": "latest",
     "turbo": "latest"
   },
