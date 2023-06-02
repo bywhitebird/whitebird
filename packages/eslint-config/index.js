@@ -77,7 +77,7 @@ module.exports = {
     'comma-style': ['error', 'last'],
     'comma-spacing': ['error', { before: false, after: true }],
     'semi-style': ['error', 'first'],
-    'indent': ['error', 2],
+    'indent': ['error', 2, { 'SwitchCase': 1 }],
     'function-paren-newline': ['error', 'multiline-arguments'],
     'function-call-argument-newline': ['error', 'consistent'],
     'max-lines': ['error', 400],
@@ -97,6 +97,13 @@ module.exports = {
         allowObjectEnd: true,
         allowArrayStart: true,
         allowArrayEnd: true,
+      },
+    ],
+    'no-warning-comments': [
+      'warn',
+      {
+        terms: ['todo', 'fixme'],
+        location: 'anywhere',
       },
     ],
     'whitebird/wrap-multiline-expression': 'error',
