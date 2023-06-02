@@ -1,0 +1,13 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@whitebird/generate-assets": "0.0.0",
+    "@whitebird/eslint-config": "0.1.0",
+    "eslint-plugin-whitebird": "0.0.0",
+    "@whitebird/tsconfig": "0.1.0"
+  },
+  "changesets": [
+    "lemon-bobcats-compete"
+  ]
+}
