@@ -1,5 +1,19 @@
 /* eslint-disable */
 
+import fs from 'node:fs'
+import path from 'node:path'
+
+const cwd = process.cwd()
+
+function getPackageJson() {
+  const packageJsonPath = path.join(cwd, 'package.json')
+  const packageJson = fs.readFileSync(packageJsonPath, 'utf8')
+  return JSON.parse(packageJson)
+}
+
+const packageJson = getPackageJson()
+const workspacePackages = /** @type {string[]} */ (packageJson['workspaces']) || [cwd]
+
 const variableNamingConvention = [
   {
     selector: 'variable',
@@ -106,7 +120,9 @@ module.exports = {
         location: 'anywhere',
       },
     ],
+
     'whitebird/wrap-multiline-expression': 'error',
+
     'import/no-unresolved': 'error',
     'import/order': [
       'error',
@@ -127,6 +143,7 @@ module.exports = {
       },
     ],
     'import/no-default-export': 'error',
+
     'jsdoc/require-jsdoc': [
       'error',
       {
@@ -141,8 +158,10 @@ module.exports = {
         },
       },
     ],
+
     'es/no-destructuring': 'error',
     'es/no-arrow-functions': 'error',
+
     'unicorn/better-regex': 'error',
     'unicorn/filename-case': [
       'error',
@@ -214,7 +233,9 @@ module.exports = {
     'unicorn/template-indent': 'error',
     'unicorn/text-encoding-identifier-case': 'error',
     'unicorn/throw-new-error': 'error',
+
     'fp/no-arguments': 'error',
+
     'functional/no-expression-statements': [
       'error',
       {
@@ -222,13 +243,16 @@ module.exports = {
         ignorePattern: ['^\\bvoid\\b\\s'],
       },
     ],
+
     'promise/no-nesting': 'error',
     'promise/no-return-wrap': 'error',
   },
   settings: {
     'import/resolver': {
       typescript: {
-        project: './tsconfig.json',
+        project: workspacePackages.map((folder) =>
+          path.join(folder, 'tsconfig.json')
+        ),
       },
     },
   },
