@@ -8,6 +8,7 @@
     "@whitebird/tsconfig": "0.1.0"
   },
   "changesets": [
-    "lemon-bobcats-compete"
+    "lemon-bobcats-compete",
+    "strong-trainers-knock"
   ]
 }
