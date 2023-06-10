@@ -1,5 +1,11 @@
 # @whitebird/eslint-config
 
+## 1.0.0-beta.2
+
+### Patch Changes
+
+- Include cjs and mjs
+
 ## 1.0.0-beta.1
 
 ### Patch Changes
